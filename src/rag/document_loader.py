@@ -4,7 +4,7 @@ Loads and chunks documents from the knowledge base for vector storage.
 """
 from pathlib import Path
 from typing import Optional
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 
 

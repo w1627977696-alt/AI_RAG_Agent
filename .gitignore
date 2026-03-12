@@ -23,9 +23,10 @@ env/
 # Environment variables
 .env
 
-# Data files (keep samples)
+# Data files (keep knowledge base, ignore generated)
 data/uploads/
 data/vector_store/
+data/sample/
 *.db
 
 # Logs
