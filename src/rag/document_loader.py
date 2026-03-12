@@ -51,7 +51,8 @@ class KnowledgeBaseLoader:
             if file_path.suffix in (".md", ".txt"):
                 return self._load_text_file(file_path)
             else:
-                # For PDF and DOCX, fall back to text reading
+                # PDF and DOCX are listed as supported but not yet implemented;
+                # attempt plain-text read as a best-effort fallback.
                 return self._load_text_file(file_path)
         except Exception as e:
             print(f"Warning: Failed to load {file_path}: {e}")

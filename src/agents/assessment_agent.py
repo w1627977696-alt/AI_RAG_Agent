@@ -141,7 +141,8 @@ class AssessmentAgent:
             },
         }
 
-    def assess_without_llm(self, anomaly_summary: dict, fleet_statistics: dict) -> dict:
+    @staticmethod
+    def assess_without_llm(anomaly_summary: dict, fleet_statistics: dict) -> dict:
         """
         Perform rule-based impact assessment without LLM (fallback mode).
         Used when LLM is unavailable.

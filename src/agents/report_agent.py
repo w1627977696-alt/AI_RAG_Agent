@@ -86,8 +86,8 @@ class ReportAgent:
             },
         }
 
+    @staticmethod
     def generate_report_without_llm(
-        self,
         data_summary: dict,
         anomaly_summary: dict,
         assessment_result: dict,

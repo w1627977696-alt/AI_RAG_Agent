@@ -27,11 +27,14 @@ def load_sample_data() -> list[dict]:
     """Load sample data from local file."""
     sample_path = Path(__file__).parent.parent.parent / "data" / "sample" / "realtime_batch.json"
     if sample_path.exists():
-        with open(sample_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        for record in data:
-            record.pop("_is_anomaly_injected", None)
-        return data
+        try:
+            with open(sample_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for record in data:
+                record.pop("_is_anomaly_injected", None)
+            return data
+        except (json.JSONDecodeError, OSError):
+            return []
     return []
 
 

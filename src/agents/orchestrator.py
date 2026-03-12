@@ -117,10 +117,7 @@ def impact_assessment_node(state: PipelineState) -> dict:
         fleet_statistics = state.get("processed_data", {}).get("fleet_statistics", {})
 
         # Use rule-based assessment (no LLM dependency for reliability)
-        agent = AssessmentAgent.__new__(AssessmentAgent)
-        result = AssessmentAgent.assess_without_llm(
-            agent, anomaly_results, fleet_statistics
-        )
+        result = AssessmentAgent.assess_without_llm(anomaly_results, fleet_statistics)
 
         return {
             "assessment_result": result,
@@ -142,9 +139,8 @@ def report_generation_node(state: PipelineState) -> dict:
         assessment_result = state.get("assessment_result", {})
 
         # Use template-based report generation (no LLM dependency)
-        agent = ReportAgent.__new__(ReportAgent)
         result = ReportAgent.generate_report_without_llm(
-            agent, data_summary, anomaly_results, assessment_result
+            data_summary, anomaly_results, assessment_result
         )
 
         return {
