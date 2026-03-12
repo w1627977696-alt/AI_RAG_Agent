@@ -1,0 +1,66 @@
+Artificial Intelligence Overview
+=================================
+
+Artificial intelligence (AI) is intelligence demonstrated by machines,
+as opposed to the natural intelligence displayed by animals including humans.
+AI research has been defined as the field of study of intelligent agents,
+which refers to any system that perceives its environment and takes actions
+that maximize its chance of achieving its goals.
+
+Machine Learning
+----------------
+Machine learning (ML) is a subset of artificial intelligence that focuses
+on building systems that learn from data. Instead of being explicitly
+programmed to perform a task, ML systems learn from experience.
+
+Key types of machine learning include:
+- Supervised Learning: The algorithm is trained on labeled data.
+- Unsupervised Learning: The algorithm finds hidden patterns in unlabeled data.
+- Reinforcement Learning: The algorithm learns by interacting with an environment.
+
+Deep Learning
+-------------
+Deep learning is a subset of machine learning that uses neural networks with
+many layers (hence "deep") to analyze various forms of data. It has enabled
+breakthroughs in image recognition, natural language processing, and speech
+recognition.
+
+Natural Language Processing (NLP)
+----------------------------------
+NLP is a branch of AI focused on the interaction between computers and humans
+using natural language. Applications include:
+- Machine translation (e.g., Google Translate)
+- Sentiment analysis
+- Text summarization
+- Chatbots and virtual assistants
+
+Retrieval-Augmented Generation (RAG)
+-------------------------------------
+RAG is an AI framework that retrieves relevant documents from a knowledge base
+and uses them as context when generating answers. This helps language models
+produce more accurate and up-to-date responses by grounding them in real data.
+
+The RAG pipeline typically consists of:
+1. Document ingestion: Load and split source documents into chunks.
+2. Embedding: Convert text chunks into numerical vectors.
+3. Storage: Store vectors in a vector database for fast retrieval.
+4. Retrieval: Given a user query, find the most similar chunks.
+5. Generation: Pass the query and retrieved chunks to an LLM to generate an answer.
+
+Vector Databases
+----------------
+Vector databases are specialized storage systems optimized for storing and
+querying high-dimensional vectors (embeddings). Popular options include:
+- Chroma
+- Pinecone
+- Weaviate
+- FAISS
+
+Large Language Models (LLMs)
+-----------------------------
+LLMs are neural networks trained on vast amounts of text data. They can
+generate coherent and contextually relevant text. Examples include:
+- GPT-4 (OpenAI)
+- Claude (Anthropic)
+- Gemini (Google)
+- LLaMA (Meta)
